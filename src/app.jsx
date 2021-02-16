@@ -4,8 +4,8 @@ import Metronomes from './components/metronomes';
 class App extends Component {
     state = { 
         metronomes: [
-            {id:1, link: "https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"},
-            {id:2, link:"https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg"}
+            {id:0, link: "https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"},
+            {id:1, link:"https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg"}
         ]
      }
 
@@ -13,11 +13,12 @@ class App extends Component {
          let metronomes = this.state.metronomes;
          console.log("printing:",metronomes)
          const metronomeLength = metronomes.length;
+         console.log("option:",option);
          switch (option){
-             case 1: metronomes.push({id: metronomeLength, link:"https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"})
+             case '1': metronomes.push({id: metronomeLength, link:"https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"})
              break;
 
-             case 2: metronomes.push({id: metronomeLength, link:"https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg"})
+             case '2': metronomes.push({id: metronomeLength, link:"https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg"})
              break;
 
              default: metronomes.push({id: metronomeLength, link:"https://actions.google.com/sounds/v1/cartoon/cartoon_cowbell.ogg"})
